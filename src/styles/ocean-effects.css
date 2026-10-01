@@ -1,0 +1,30 @@
+/* All effects stay inside the ocean and share the existing pause boundary. */
+.ship-position{transition:none}.ship-moving{animation:ship-advance 2500ms cubic-bezier(.4,0,.15,1) both;animation-delay:var(--round-delay,0ms)}
+@keyframes ship-advance{from{left:var(--from-left)}to{left:var(--to-left)}}
+.wind-effect{pointer-events:none;animation:wind-window 2500ms linear both;animation-delay:var(--round-delay,0ms)}
+.wind-streaks{animation:wind-streak .625s ease-out 4;animation-delay:var(--round-delay,0ms)}.sailing .sail{animation:sail-breathe .625s 4;animation-delay:var(--round-delay,0ms)}
+.sailing .wake{animation:wake-pulse .625s 4;animation-delay:var(--round-delay,0ms)}
+@keyframes wind-window{0%,100%{opacity:0}10%,85%{opacity:.8}}
+@keyframes wind-streak{from{transform:translateX(-12px);stroke-dasharray:32 12;stroke-dashoffset:40}to{transform:translateX(7px);stroke-dasharray:32 12;stroke-dashoffset:0}}
+.island-finish-scene{pointer-events:none}.finish-playing .arrival-shore{animation:shore-appear 300ms both;animation-delay:calc(2400ms + var(--round-delay,0ms))}
+.finish-playing .disembarking-crew{animation:crew-walk 1600ms ease-in-out both;animation-delay:calc(var(--walk-delay) + var(--round-delay,0ms))}
+.finish-settled .disembarking-crew{transform:translate(var(--walk-x),var(--walk-y))}
+.finish-playing .crew-celebration{animation:crew-cheer 450ms 3 alternate;animation-delay:calc(5500ms + var(--round-delay,0ms))}
+.chest-lid{transform-origin:27px 0px}.finish-playing .chest-lid{animation:chest-open 700ms ease-out both;animation-delay:calc(5200ms + var(--round-delay,0ms))}
+.finish-settled .chest-lid{transform:translateY(-13px) rotate(-24deg) scaleY(.7)}
+.finish-playing .treasure-glow,.finish-playing .treasure-rays{animation:treasure-light 900ms ease-out both;animation-delay:calc(5400ms + var(--round-delay,0ms))}
+.finish-playing .treasure-sparkles{animation:treasure-sparkle 1500ms ease-out both;animation-delay:calc(5500ms + var(--round-delay,0ms))}
+.finish-settled .treasure-glow{opacity:.65}.finish-settled .treasure-rays{opacity:.45}.finish-settled .treasure-sparkles{opacity:1}
+.ship-arrived .ship-nameplate{left:40%;top:auto;bottom:-17px;transform:translateX(-50%)}
+@keyframes shore-appear{from{opacity:0}to{opacity:1}}
+@keyframes crew-walk{0%{transform:translate(0,0)}45%{transform:translate(var(--dock-x),27px)}100%{transform:translate(var(--walk-x),var(--walk-y))}}
+@keyframes crew-cheer{to{transform:translateY(-9px)}}
+@keyframes chest-open{from{transform:none}to{transform:translateY(-13px) rotate(-24deg) scaleY(.7)}}
+@keyframes treasure-light{from{opacity:0}to{opacity:.65}}
+@keyframes treasure-sparkle{0%{opacity:0;transform:translateY(12px)}25%,80%{opacity:1}100%{opacity:1;transform:translateY(-8px)}}
+.dolphin-manager{position:absolute;inset:0;pointer-events:none;overflow:hidden}.dolphin{position:absolute;width:clamp(100px,13vw,195px);height:auto;overflow:visible}
+.dolphin-leap{opacity:0;transform-origin:72px 94px;animation:dolphin-leap var(--dolphin-period) linear infinite;animation-delay:var(--dolphin-delay)}
+.dolphin-splash{opacity:0;transform-origin:166px 111px;animation:dolphin-splash var(--dolphin-period) linear infinite;animation-delay:var(--dolphin-delay)}
+@keyframes dolphin-leap{0%,2%,15%,100%{opacity:0;transform:translate(0,22px) rotate(-22deg)}3%{opacity:1;transform:translate(0,0) rotate(-20deg)}6%{opacity:1;transform:translate(28px,-38px) rotate(-8deg)}9%{opacity:1;transform:translate(62px,-36px) rotate(12deg)}12%{opacity:1;transform:translate(85px,-4px) rotate(24deg)}14%{opacity:0;transform:translate(98px,30px) rotate(30deg)}}
+@keyframes dolphin-splash{0%,12%,19%,100%{opacity:0;transform:scale(.6)}13%{opacity:.85;transform:scale(.8)}18%{opacity:0;transform:scale(1.4)}}
+@media(prefers-reduced-motion:reduce){.wind-effect,.dolphin-manager{display:none}.ship-moving{animation-duration:1ms}.finish-playing .arrival-shore,.finish-playing .treasure-glow,.finish-playing .treasure-rays,.finish-playing .treasure-sparkles,.finish-playing .chest-lid,.finish-playing .disembarking-crew{animation-duration:1ms;animation-delay:0ms}.finish-playing .crew-celebration{animation:none}}

@@ -1,0 +1,10 @@
+.question-image{display:block;max-width:100%;width:auto;height:auto;max-height:220px;object-fit:contain;border-radius:10px;margin:12px auto;background:#f0f0e5}
+.question-image-upload{border:1px solid #dce3d3;border-radius:12px;padding:16px;display:grid;gap:12px;min-width:0}
+.question-image-upload legend{padding:0 6px;font-weight:600}.question-image-upload legend span{font-weight:400;color:#75826c}
+.question-image-upload input[type=file]{max-width:100%;font-size:13px}.question-image-upload .question-image{max-height:180px}
+.image-upload-error,.question-image-error{color:#a94735;font-size:13px}.question-image-upload .button{justify-self:start}
+.question-prompt.with-image{display:flex;align-items:center;justify-content:center;gap:24px;margin:10px auto 16px;max-width:1200px}
+.question-prompt.with-image .question-image{max-height:clamp(90px,16vh,165px);max-width:35%;margin:0}
+.question-prompt.with-image h2{margin:0;text-align:left}.team-question .question-image{max-height:240px}
+.question-card .question-image{max-width:120px;max-height:75px;margin:8px 0}
+@media(max-width:560px){.question-prompt.with-image{gap:12px}.question-prompt.with-image .question-image{max-height:100px;max-width:36%}.question-prompt.with-image h2{font-size:17px}}

@@ -1,0 +1,14 @@
+@font-face{font-family:'Noto Sans Georgian';font-style:normal;font-weight:100 900;font-display:swap;src:url('@fontsource-variable/noto-sans-georgian/files/noto-sans-georgian-georgian-wght-normal.woff2') format('woff2');unicode-range:U+10A0-10FF,U+1C90-1CBF,U+2D00-2D2F}
+.language-switcher{display:inline-flex;align-items:center;gap:2px;padding:3px;background:#fffdf1;border:1px solid #ced9c9;border-radius:9px;flex-shrink:0;white-space:nowrap;line-height:1.2}
+.language-switcher button{font-family:'DM Sans',sans-serif;padding:7px 9px;min-width:34px;min-height:31px;border-radius:6px;background:transparent;color:#456252;font-size:11px;font-weight:700}
+.language-switcher button[aria-pressed=true]{background:#245e54;color:#fffdf1}.language-switcher button:hover{box-shadow:inset 0 0 0 1px #7ea594}
+.image-file-input{position:absolute;width:1px!important;height:1px;padding:0!important;opacity:0;overflow:hidden}.image-file-button{cursor:pointer;justify-self:start}.question-image-upload:has(.image-file-input:focus-visible) .image-file-button{outline:3px solid #e5b34e;outline-offset:3px}
+.team-header-actions{display:flex;align-items:center;gap:12px}.results-language{position:relative;z-index:3;display:flex;justify-content:flex-end;margin-bottom:16px}.connection-language{display:flex;justify-content:flex-end;padding:20px}
+.modal .section-heading .language-switcher button{font-size:11px;min-width:32px;width:auto;padding:7px;min-height:31px}.modal .section-heading h2{flex:1}.modal .section-heading{flex-wrap:wrap;gap:10px}
+html[lang=ka] .eyebrow,html[lang=ka] .game-logo,html[lang=ka] .sidebar-label,html[lang=ka] .landing-tag,html[lang=ka] .island-title{letter-spacing:.3px}
+html[lang=ka] h1,html[lang=ka] h2,html[lang=ka] h3{letter-spacing:0;line-height:1.4}
+html[lang=ka] .hero-copy h1{font-size:clamp(35px,4vw,62px);line-height:1.45}
+html[lang=ka] .button{white-space:normal;line-height:1.5}html[lang=ka] .brand>span:last-child{font-size:16px;line-height:1.65;max-width:135px}
+.game-hud .hud-actions{gap:10px}.team-header .game-logo{min-width:0}.question-image-upload input[type=file]{font-size:12px}
+@media(max-width:1000px){.landing>header{flex-wrap:wrap;gap:14px}.landing-tag{display:none}.admin-topbar{flex-wrap:wrap;gap:12px}.top-actions{flex-wrap:wrap;gap:8px}.game-hud .network-status{font-size:9px}}
+@media(max-width:560px){.language-switcher button{padding:6px;min-width:30px}.team-header{gap:10px;flex-wrap:wrap}.team-header-actions{gap:8px}.team-header .game-logo{font-size:11px}.game-hud .hud-actions{gap:5px}.game-hud .network-status{font-size:8px}.game-hud .game-logo{font-size:9px}.hero-actions{flex-wrap:wrap}.landing-footer{flex-wrap:wrap;gap:12px}.ship-nameplate{white-space:normal}.ship-nameplate strong{line-height:1.2}.ship-nameplate>span:last-child{white-space:nowrap}}
